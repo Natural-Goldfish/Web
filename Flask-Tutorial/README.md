@@ -11,3 +11,9 @@
     ```
     $ pip install Flask
     ```
+    
+# Versions
+
+- Python 3.8.1  
+- Flask 2.0.1
+
