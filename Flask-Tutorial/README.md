@@ -2,18 +2,34 @@
 
 # Installation
 
-  - ## Create an Virtual Environment
-    ```
-    $ python -m venv 'VIRTUAL ENVIRONMENT NAME'
-    ```
-  - ## Flask Installation
+  ### Create an Virtual Environment
+  
+  ```
+  $ python -m venv 'VIRTUAL ENVIRONMENT NAME'
+  ```
+  
+  ### Flask Installation
 
-    ```
-    $ pip install Flask
-    ```
+  ```
+  $ pip install Flask
+  ```
     
-# Versions
+</br></br>
 
-- Python 3.8.1  
-- Flask 2.0.1
+# Application Setup
 
+  ### Application Factory
+
+  ### Run the Application
+
+</br></br>
+
+# Define and Access the Database
+  
+  ### Connect to the Database
+
+  ### Create the Tables
+
+  ### Register with the Application
+
+  ### Initialize the Database
