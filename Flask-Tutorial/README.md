@@ -33,3 +33,17 @@
   ### Register with the Application
 
   ### Initialize the Database
+
+</br></br>
+
+# Blueprints and Views
+
+</br></br>
+
+# Templates
+
+</br></br>
+
+# Static Files
+
+</br></br>
