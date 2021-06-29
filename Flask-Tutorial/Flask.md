@@ -1,7 +1,9 @@
 # Application Object
 
 - ## app.config
-  _Flask.Config class_ 와 같은 _configuration dictionary_ 입니다. Regular dictionary와 동일하게 동작하지만, configuration을 file에서 load하기 위한 추가 methods를 지원합니다. Default configuration parameters는 아래와 같습니다. :
+  _Flask.Config class_ 와 같은 _configuration dictionary_ 입니다. 
+  Regular dictionary와 동일하게 동작하지만, file에서 configuration을 load하기 위해 필요한 methods를 지원합니다. 
+  Default configuration parameters는 아래와 같습니다. :
   
   ```python
   default_config = {
