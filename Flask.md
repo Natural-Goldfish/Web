@@ -1,7 +1,7 @@
 # Application Object
 
 - ## app.config
-  _Flask.Config class_ 와 같은 _configuration dictionary_ 입니다. Regular dictionary와 동일하게 동작하지만, configuration을 file에서 load하기 위한 추가 methods를 지원합니다.
+  _Flask.Config class_ 와 같은 _configuration dictionary_ 입니다. Regular dictionary와 동일하게 동작하지만, configuration을 file에서 load하기 위한 추가 methods를 지원합니다. Default configuration parameters는 아래와 같습니다. :
   
   ```python
   default_config = {
@@ -37,14 +37,17 @@
   }
   ```
   
-  - #### _property debug : bool_
-    Application object의 property인 이 값은 _DEBUG config key와 mapping됩니다._ 
-    Debug mode를 사용하게 되면, _flask run_ 을 사용하여 development server를 실행했을 때, interactive debugger가 unhandled exceptions를 표시합니다. 
-    또한, code에 변화가 생길 때마다 server가 자동으로 reload되어, 서버를 재실행 해야하는 불편함이 없습니다. 
-    이 값은 application object의 _env_ 값이 _'development'_ 인 경우나 _FLASK_DEBUG_ envrionmet variable에 의해 overridden 되었을 때 활성화 됩니다. 
-    따라서, code내에서 값을 설정한 경우에는 예상했던 대로 동작하지 않을 수 있습니다.  
-    
-    _Default : True if env is 'development', or False otherwise._
+- ## property debug : bool
+  Application object의 property인 이 값은 _DEBUG config key와 mapping됩니다._ 
+  Debug mode를 사용하게 되면, _flask run_ 을 사용하여 development server를 실행했을 때, interactive debugger가 unhandled exceptions를 표시합니다. 
+  또한, code에 변화가 생길 때마다 server가 자동으로 reload되어, 서버를 재실행 해야하는 불편함이 없습니다. 
+  이 값은 application object의 _env_ 값이 _'development'_ 인 경우나 _FLASK_DEBUG_ envrionment variable에 의해 overridden 되었을 때 활성화 됩니다. 
+  따라서, code내에서 값을 설정한 경우에는 예상했던대로 동작하지 않을 수 있습니다.  
 
+  _Default : True if env is 'development', or False otherwise._
+
+- ## env
+  Application이 실행되는 환경을 의미합니다. Flask와 extensions는 실행되는 환경에 따라, 가능한 행동이 있습니다. 예를 들어, debug mode를 실행하는 것이 있습니다. 이 값은 _ENV config key와 mapping 됩니다._ 또한, _FLASK_ENV_ envrionment variable에 의해 설정 될 수 있으며, code내에서 값을 설정한 경우에는 예상했던대로 동작하지 않을 수 있습니다.  
   
+  _Default : 'production'_
   
