@@ -52,4 +52,41 @@
   Application이 실행되는 환경을 의미합니다. Flask와 extensions는 실행되는 환경에 따라, 가능한 행동이 있습니다. 예를 들어, debug mode를 실행하는 것이 있습니다. 이 값은 _ENV config key와 mapping 됩니다._ 또한, _FLASK_ENV_ envrionment variable에 의해 설정 될 수 있으며, code내에서 값을 설정한 경우에는 예상했던대로 동작하지 않을 수 있습니다.  
   
   _Default : 'production'_
+
+</br></br>
+
+# Large Applications as Packages
+간단한 flask application structure는 아래와 같습니다.  
+```
+/yourapplication
+    yourapplication.py
+    /static
+        style.css
+    /templates
+        layout.html
+        index.html
+        login.html
+        ...
+```
+  
+작은 applications에서는 문제가 없지만, 큰 applications에서는 module대신 package를 사용하는 것이 더 좋은 선택입니다.
+
+- ## Simple Packages
+  package를 사용하는 방법은 간단합니다. _yourapplications_ 이라는 새로운 폴더안에 기존의 파일을 위치시킵니다. 그리고, _yourapplication.py_ 를 ___init__.py_ 로 변경합니다. (모든 _.pyc_ 파일을 먼저 지우지 않으면, 정상적으로 동작하지 않을 수 있습니다.)  
+  
+  최종 파일 구조는 아래와 같습니다.
+  ```
+  /yourapplication
+    /yourapplication
+        __init__.py
+        /static
+            style.css
+        /templates
+            layout.html
+            index.html
+            login.html
+            ...
+   ```
+     
+   
   
